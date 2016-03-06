@@ -1,0 +1,15 @@
+<template name="mainMenu">
+  <ul class="sidebar-menu">
+    <li class="header">Навигация</li>
+    <li class="{{isActivePath '/'}}">
+      <a href="/">
+        <i class="fa fa-dashboard"></i> <span>Главная</span>
+      </a>
+    </li>
+    <li class="{{isActivePath '/testing'}}">
+      <a href="/testing">
+        <i class="fa fa-user"></i><span>Testing</span>
+      </a>
+    </li>
+  </ul>
+</template>
