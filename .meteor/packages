@@ -17,9 +17,11 @@ es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 twbs:bootstrap
-iron:router
 yp2:admin-lte
 zimme:active-route
 msavin:mongol
 matb33:collection-hooks
 chrismbeckett:toastr
+kadira:flow-router
+kadira:blaze-layout
+simple:rest

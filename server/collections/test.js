@@ -14,10 +14,11 @@ Test.allow({
 Meteor.publish('test', function(){
   return Test.find();
 })
+
 Meteor.methods({
   addTestItem:function(testItemJSON){
     testItemJSON.createdAt = Date.now();
-     var uid = Test.insert(testItemJSON);
-     return uid;
+    console.log('adding test item: '+testItemJSON);
+    Test.insert(testItemJSON);
   }
 });

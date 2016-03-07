@@ -1,4 +1,4 @@
-<template name="ApplicationLayout">
+<template name="Main">
   <div class="wrapper">
     <header class="main-header">
       <a href="/" class="logo">
@@ -289,7 +289,7 @@
     </aside>
 
 <!--Content start-->
-    {{> yield}}
+    {{> Template.dynamic template=content}}
 <!--Content end-->
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
