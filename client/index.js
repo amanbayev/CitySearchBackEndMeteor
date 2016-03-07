@@ -5,8 +5,13 @@ Template.Main.onRendered(function(){
             body.removeClass();
             body.addClass("skin-blue sidebar-mini");
 
-        $(function () {
-            MeteorAdminLTE.run()
-        });
+    $(function () {
+        MeteorAdminLTE.run()
+    });
+
+    $.cloudinary.config({
+      cloud_name: "amanbayev"
+    });
+
   }
 });

@@ -38,6 +38,10 @@
                       {{/each}}
                     </select>
                   </div>
+                  <div class="form-group">
+                    <label>Files</label>
+                    <input type="file" id="selectFileInput" />
+                  </div>
                 </div>
                 <div class="box-footer">
                   <button type="submit" class="btn btn-primary" id="submitNewOrganizationItem">Добавить</button>
@@ -71,6 +75,9 @@
                     <td>
                       Категория
                     </td>
+                    <td>
+                      Картинка
+                    </td>
                   </tr>
                 </thead>
                 <tbody>
@@ -84,6 +91,9 @@
                       </td>
                       <td>
                         {{getCategoryById item.category}}
+                      </td>
+                      <td>
+                        <img src="http://res.cloudinary.com/amanbayev/image/private/c_scale,w_360/v1457383100/{{item.imageObject.public_id}}">
                       </td>
                     </tr>
                   {{/each}}

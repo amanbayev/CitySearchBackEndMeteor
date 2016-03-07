@@ -38,6 +38,7 @@ kadira:blaze-layout@2.3.0
 kadira:flow-router@2.10.1
 lai:collection-extensions@0.1.4
 launch-screen@1.0.4
+lepozepo:cloudinary@4.1.3
 livedata@1.0.15
 logging@1.0.8
 matb33:collection-hooks@0.8.1
