@@ -19,6 +19,12 @@ Template.Organizations.helpers({
 });
 
 Template.Organizations.events({
+  "change #OrganizationNameInput": function(e,t){
+    var inputField = t.find("#OrganizationNameInput").value;
+    if (inputField.length > 0) {
+      Session.set("OrganizationHasName",true);
+    }
+  },
   "change #selectFileInput": function(e,t){
     var files = e.currentTarget.files;
     return Cloudinary.upload(files, {
@@ -30,6 +36,8 @@ Template.Organizations.events({
       Meteor.call("c.get_download_url", res.public_id, function(err, download_url) {
         console.log("Upload Error: " + err);
         Session.set('organizationImageUrl', download_url);
+
+        $("#submitNewOrganizationItem").removeClass("disabled");
         return console.log("download_url: " + download_url);
       });
       return console.log('upload result: ' + res.public_id);
@@ -49,6 +57,12 @@ Template.Organizations.events({
   },
   "click #submitNewOrganizationItem": function(e,t){
     e.preventDefault();
+    var isOk = false;
+    isOk = Session.get("OrganizationHasName");
+    if (!isOk) {
+      toastr.error('Введите название организации', "Новая организация");
+      return;
+    }
     var organizationName = t.find('#OrganizationNameInput').value;
     var catSelect = t.find('#categorySelect');
     var orgImageObj = Session.get('organizatoinImageObject');
@@ -58,6 +72,7 @@ Template.Organizations.events({
     var imgUrl = Session.get('organizationImageUrl');
     if (imgUrl == null) {
       console.log('pic is null');
+
       return;
     }
     if (organizationName.length > 0) {
@@ -72,6 +87,7 @@ Template.Organizations.events({
       toastr.info(organizationName + " организация добавлена!", "Новая организация");
       t.find("#OrganizationNameInput").value = '';
       Session.set('organizationImageUrl', null);
+      Session.set("OrganizationHasName",false);
       Session.set('isAddingOrganization',false);
     }
   }

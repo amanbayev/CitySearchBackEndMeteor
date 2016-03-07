@@ -17,20 +17,39 @@
     <section class="content">
       <!-- Info boxes -->
       <div class="row">
+        <div class="col-xs-12">
+          <h4>Добро пожаловать на тестовый сервер Талгата Аманбаева для
+            <a href="https://www.youtube.com/channel/UChR_ubNp0jAq7HWrso6woRw" target="_blank">
+            канала YouTube</a> уроки разработки Meteor &amp; Android!</h4>
+        </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Процент готовности проекта</span>
-              <span class="info-box-number">1 <small>%</small></span>
+          <a href="/organizations">
+            <div class="info-box">
+              <span class="info-box-icon bg-aqua"><i class="fa fa-building-o"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Количество организаций</span>
+                <span class="info-box-number">{{orgCount}}</span>
+              </div>
+              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box-content -->
-          </div>
+          </a>
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
-
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <a href="/categories">
+            <div class="info-box">
+              <span class="info-box-icon bg-aqua"><i class="fa fa-cutlery"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Количество категорий</span>
+                <span class="info-box-number">{{categoryCount}}</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </a>
+        </div>
+        <!-- /.col -->
       </div>
       <!-- /.row -->
     </section>
