@@ -18,7 +18,7 @@ Meteor.publish('categories', function(){
 Meteor.methods({
   addNewCategory:function(categoryJSON){
     categoryJSON.createdAt = Date.now();
-    console.log('adding test item: ' + categoryJSON);
+    console.log('adding category item: ' + categoryJSON);
     Categories.insert(categoryJSON);
   }
 });
