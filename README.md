@@ -1,12 +1,17 @@
 # CitySearchBackEndMeteor
-Back end code of Meteor app named "CitySearch". The detailed information can be found on my YouTube channel.
+
+Back end code of Meteor app named "CitySearch". 
+The detailed information can be found on my YouTube channel.
+
 http://198.199.82.28/methods/addNewAndroidCategory
+
 [{
   "name":"",
   "imageUrl":""
 }]
 
 http://198.199.82.28/methods/updateAndroidCategory
+
 [
   "",
   {
@@ -16,6 +21,7 @@ http://198.199.82.28/methods/updateAndroidCategory
 ]
 
 http://198.199.82.28/methods/removeAndroidCategory
+
 [{
   "id":""
 }]
